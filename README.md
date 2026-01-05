@@ -1,73 +1,65 @@
-# React + TypeScript + Vite
+# 💰 DuitKu - Personal Finance Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-19.2-61DAFB?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Supabase](https://img.shields.io/badge/Supabase-2.89-3ECF8E?style=for-the-badge&logo=supabase&logoColor=3ECF8E)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-7.2-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 
-Currently, two official plugins are available:
+> A modern, web-based Personal Finance Tracker designed to help users manage their income, expenses, and monthly budgets with real-time data visualization.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 📋 Table of Contents
+- [Overview](#-overview)
+- [Key Features](#-key-features)
+- [Tech Stack](#-tech-stack)
+- [Project Structure](#-project-structure)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📖 Overview
+**DuitKu** is a sleek financial management tool built to simplify how you track your money. By combining a powerful PostgreSQL backend with an interactive React frontend, this application provides users with immediate insights into their spending habits through visual charts and budget alerts.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ✨ Key Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 🔐 Secure Authentication
+- **User Management:** Secure Sign-In and Sign-Up powered by **Supabase Auth**.
+- **Protected Routes:** Ensures that your financial data is only accessible to you.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 📊 Financial Insights
+- **Interactive Charts:** Visualizes spending by category using **Recharts** (Pie Charts).
+- **Summary Cards:** Quick view of Total Balance, Total Income, and Total Expenses.
+- **Transaction History:** A detailed list of all your past financial activities.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 🎯 Budget Tracking
+- **Budget Progress:** Monitor your spending against a set monthly limit with a dynamic progress bar.
+- **Smart Alerts:** Automatically notifies you when your spending exceeds 90% of your allocated budget.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠️ Tech Stack
+
+This project leverages a modern development stack for optimal performance and developer experience:
+
+* **Frontend Framework:** React 19
+* **Database & Auth:** Supabase (PostgreSQL)
+* **Data Visualization:** Recharts
+* **Styling:** Tailwind CSS & PostCSS
+* **Icons:** Lucide React
+* **Build Tool:** Vite
+* **Routing:** React Router 7
+
+---
+
+## 📂 Project Structure
+
+* **`src/pages/`**: Contains main view components like `Dashboard.jsx` and `Login.jsx`.
+* **`src/components/`**: Modular UI elements including `ExpenseChart.jsx`, `TransactionList.jsx`, and `BudgetSection.jsx`.
+* **`src/supabaseClient.js`**: Centralized configuration for Supabase connection.
+* **`src/App.jsx`**: Main application logic and routing configuration.
+
+---
+
+Created with ❤️ by Syafa
